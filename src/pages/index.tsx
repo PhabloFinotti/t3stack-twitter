@@ -7,7 +7,7 @@ import { type RouterOutputs, api } from "~/utils/api";
 import dayjs from "dayjs"
 import relativeTime from "dayjs/plugin/relativeTime"
 import Image from "next/image";
-import { LoadingPage } from "~/components/loading";
+import { LoadingPage } from "~/components/Loading";
 
 dayjs.extend(relativeTime)
 
@@ -36,7 +36,7 @@ const PostView = (props: PostWithUser) => {
         <div className="flex text-slate-300 gap-1 items-center">
           <span>{`@${author.username}`}</span> · <span className="text-xs text-slate-500">{dayjs(post.createdAt).fromNow()}</span>
         </div>
-        <span>
+        <span className="text-2xl">
           {post.content}
         </span>
       </div>
