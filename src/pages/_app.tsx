@@ -4,10 +4,12 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 
 import "~/styles/globals.css";
+import { Toaster } from "react-hot-toast";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <ClerkProvider {...pageProps}>
+      <Toaster position="bottom-center" />
       <Component {...pageProps} />
     </ClerkProvider>
   )
